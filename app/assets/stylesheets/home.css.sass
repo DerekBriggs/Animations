@@ -15,13 +15,60 @@ body
   height: 75px
   display: inline-block
   vertical-align: top
-  +animation (flight 4s linear)
+  +animation (flightX 8s linear)
 
-+keyframes (flight)
+.twit-div *
+  +animation (flightY 8s linear)
+
++keyframes(flightX)
   0%
-    +transform (translateX(-400%) translateY(-200%))
+    +transform(translateX(-800%))
+    +animation-timing-function (ease-in)
+  25%
+    +transform(translateX(-350%))
+  35%
+    +transform(translateX(-150%))
+    +animation-timing-function (ease-in)
+  49%
+    +transform(translateX(-300%))
+    +animation-timing-function (ease-out)
+  61%
+    +transform(translateX(-550%))
+    +animation-timing-function (ease-in)
+
+  80%
+    +transform(translateX(0%))
+    +animation-timing-function (ease-in)
   100%
-    +transform (translateX(0))
+    +transform(translateX(0%))
+    +animation-timing-function (ease-out)
+
++keyframes(flightY)
+  0%
+    +transform(translateY(-300%))
+    +animation-timing-function (ease)
+  25%
+    +transform(translateY(-100%))
+    +animation-timing-function (ease-in)
+  39%
+    +transform(translateY(-250%))
+    +animation-timing-function (ease-out)
+  50%
+    +transform(translateY(-400%))
+    +animation-timing-function (ease-in)
+  61%
+    +transform(translateY(-100%))
+    +animation-timing-function (ease-out)
+  70%
+    +transform(translateY(-50%))
+    +animation-timing-function (ease-in)
+
+  80%
+    +transform(translateY(-200%))
+    +animation-timing-function (ease-in)
+  100%
+    +transform(translateY(0%))
+    +animation-timing-function (ease-out)
 
 .twitter
   background: image-url('twitter.png')
